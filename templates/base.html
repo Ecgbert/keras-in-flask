@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>DEMO</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+		<span class="navbar-brand mb-0 h1" ><a herf="{{ url_for('index')}}" ></a>AI DEMO</span>
+	</nav>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+				<div style="text-align:center;">
+					<h1 class="display-3">Image Recognition Demo</h1>
+                    <p>toy demo for Image Recognition and grad-CAM</p>
+				</div>
+		</div>
+	</div>
+	{% block content %}{% endblock %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+	</script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}" ></script>
+</body>
+</html>

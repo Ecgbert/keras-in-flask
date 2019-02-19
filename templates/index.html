@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-sm-4 align-items-center">
+			<div class="ImagePreviewSection">
+				<img class="imagePreview rounded " id="ImagePreview" src="{{ url_for('static', filename='images/default.jpg')}}">
+			</div>
+			<div id="UploadImageSection">
+				<form enctype="multipart/form-data" id="UploadForm" method="post" name="UploadForm">
+					<input accept="image/*" id="upload_btn" name="file" type="file" style="display:none;">
+				</form>
+				<label class="image-name" id="Upload_Name"></label>
+				<form action="/grad-cam" enctype="multipart/form-data" method="post"></form>
+			</div>
+		</div>
+		<div class="col-12 col-sm-4 align-items-center">
+			<!--顯示辨識結果-->
+			<div class="loader" style="display:none;" ></div>
+			<label id="results-text" style="font-weight: font-size:100%;"></label>
+			<ul class="list-group" id="list_results"></ul>
+		</div>
+		<div class="col-12 col-sm-4">
+			<div id="GradCamSection">
+				<label id="gradcam_result"></label>
+				<img class="imagePreview " id="GradCamImage" src="">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-sm-4 align-items-center">
+			<button class="btn btn-outline-primary btn-lg" onclick="getFile()" type="button">choose image</button>
+			<button class="btn btn-outline-secondary btn-lg" id="camVisualize" type="button">visualize</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12"></div>
+	</div>
+</div>
+{% endblock %}
