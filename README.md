@@ -1,4 +1,4 @@
-# keras-in-flask
+# keras-with-flask
 deploy keras model in flask
 
 此專案使用ResNet50模型以及Gradient-weighted Class Activation Mapping class activation map(Grad-CAM)視覺化，顯示目標影像對最終分類結果影響最大的區域
